@@ -67,6 +67,7 @@ fn main(image: Handle, mut st: SystemTable<Boot>) -> Status {
     info!("Running kernal");
 
     let (_st, _mmap) = st.exit_boot_services(image, mmap_buf)?;
+	// what to do with mmap?
 
     entry_point(fb, size);
  }
