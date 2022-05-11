@@ -1,0 +1,12 @@
+[package]
+name = "oxidize"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = { version = "0.4", default-features = false, features = [ "max_level_trace", "release_max_level_info" ] }
+uefi = { version = "0.15", features = ["alloc", "exts", "logger" ] }
+uefi-services = { git = "https://github.com/JonahPlusPlus/uefi-rs" }
+goblin = { version = "0.5", default-features = false, features = [ "elf64" ] }
+plain = "0.2"
+x86_64 = "0.14"
